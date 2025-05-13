@@ -1,6 +1,5 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
-import Day from "./components/Day";
 import TripData from "./components/testData/trips.json";
 import { useState, useEffect } from "react";
 import type { TripType } from "./components/types/TripType";
