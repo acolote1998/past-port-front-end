@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Tachov",
+    "tripId": 0,
+    "belongsToCountryId": 0,
+    "rankeable": true,
+    "days": [{ "dayId": 0 }, { "dayId": 1 }, { "dayId": 2 }]
+  }
+]
