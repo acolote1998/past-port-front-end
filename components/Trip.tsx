@@ -33,3 +33,4 @@ function Trip({
     </>
   );
 }
+export default Trip;
