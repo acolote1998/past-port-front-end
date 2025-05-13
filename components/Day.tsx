@@ -1,19 +1,5 @@
 import { Text } from "react-native";
-type DayType = {
-  dayId: number;
-  belongsToTripId: number;
-  title: string;
-  date: string;
-  rankeable: boolean;
-  photos: PhotoType[];
-  description: string;
-  foodScore: number;
-  joyScore: number;
-};
-type PhotoType = {
-  description: string;
-  src: string;
-};
+import { DayType } from "./types/DayType";
 function Day({
   dayId,
   belongsToTripId,
