@@ -24,33 +24,6 @@
         "description": "We hade a nice walk with our dog, and then we watched the golden hour!",
         "foodScore": 8,
         "joyScore": 9
-      },
-      {
-        "dayId": 1,
-        "belongsToTripId": 0,
-        "title": "Went to Mc'Donalds",
-        "date": "2025-05-12",
-        "rankeable": true,
-        "photos": [
-          {
-            "description": "Here is Mc'Donalds!",
-            "src": "https://akiacevedo.com/projects/pastport/testimages/mc-donalds.png"
-          }
-        ],
-        "description": "",
-        "foodScore": 9,
-        "joyScore": 7
-      },
-      {
-        "dayId": 2,
-        "belongsToTripId": 0,
-        "title": "",
-        "date": "2025-05-13",
-        "rankeable": true,
-        "photos": [],
-        "description": "",
-        "foodScore": 6,
-        "joyScore": 5
       }
     ]
   }

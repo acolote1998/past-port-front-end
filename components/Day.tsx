@@ -1,5 +1,6 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, FlatList } from "react-native";
 import { DayType } from "./types/DayType";
+
 function Day({
   dayId,
   belongsToTripId,
@@ -12,7 +13,7 @@ function Day({
   joyScore,
 }: DayType) {
   return (
-    <>
+    <View style={{ flex: 1, padding: 10 }}>
       <Text>Day ID: {dayId}</Text>
       <Text>Belongs to Trip ID: {belongsToTripId}</Text>
       <Text>Title: {title}</Text>
@@ -21,25 +22,34 @@ function Day({
       <Text>Description: {description}</Text>
       {Number(foodScore) && <Text>Food Score: {foodScore}</Text>}
       {Number(joyScore) && <Text>Joy Score: {joyScore}</Text>}
-      {Array.isArray(photos) && (
-        <View>
-          <Text>Photos:</Text>
-          {photos.map((photo, index) => (
-            <View key={`day${dayId}Photo${index}`}>
-              <Image
-                source={{ uri: photo.src }}
-                style={{
-                  width: "80%",
-                  aspectRatio: 4 / 3,
-                }}
-                resizeMode="contain"
-              />
-              <Text>{photo.description}</Text>
-            </View>
-          ))}
+
+      {Array.isArray(photos) && photos.length > 0 && (
+        <View style={{ alignItems: "center" }}>
+          <Text>Pictures</Text>
+          <FlatList
+            data={photos}
+            keyExtractor={(_, index) => `photo-${index}`}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            renderItem={({ item }) => (
+              <View style={{ alignItems: "center", marginRight: 10 }}>
+                <Image
+                  source={{ uri: item.src }}
+                  style={{
+                    width: 375, // Fijamos un ancho específico
+                    height: 237, // Definimos la altura para controlar el tamaño
+                    borderRadius: 20,
+                  }}
+                  resizeMode="cover"
+                />
+                <Text>{item.description}</Text>
+              </View>
+            )}
+          />
         </View>
       )}
-    </>
+    </View>
   );
 }
+
 export default Day;
