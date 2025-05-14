@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Tachov",
+    "tripId": 0,
+    "belongsToCountryId": 0,
+    "rankeable": true,
+    "days": [
+      {
+        "dayId": 0,
+        "belongsToTripId": 0,
+        "title": "A nice day!",
+        "date": "2025-05-10",
+        "rankeable": true,
+        "photos": [
+          {
+            "description": "Foto de un perro",
+            "src": "https://akiacevedo.com/projects/pastport/testimages/cute-dog.png"
+          },
+          {
+            "description": "Golden hour",
+            "src": "https://akiacevedo.com/projects/pastport/testimages/golden-hour.png"
+          }
+        ],
+        "description": "We hade a nice walk with our dog, and then we watched the golden hour!",
+        "foodScore": 8,
+        "joyScore": 9
+      }
+    ]
+  }
+]

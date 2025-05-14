@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import TripData from "./testData/trips.json";
+import TripData from "./testData/tripSingleDay.json";
 import { useState, useEffect } from "react";
 import type { TripType } from "./types/TripType";
 import Trip from "./Trip";
