@@ -22,19 +22,20 @@ function Day({
       <Text>Food Score: {foodScore}</Text>
       <Text>Joy Score: {joyScore}</Text>
       <Text>Photos:</Text>
-      {photos.map((photo, index) => (
-        <View key={`day${dayId}Photo${index}`}>
-          <Image
-            source={{ uri: photo.src }}
-            style={{
-              width: "80%", // ocupa todo el ancho disponible
-              aspectRatio: 4 / 3, // mantiene la proporción
-            }}
-            resizeMode="contain"
-          ></Image>
-          <Text>{photo.description}</Text>
-        </View>
-      ))}
+      {Array.isArray(photos) &&
+        photos.map((photo, index) => (
+          <View key={`day${dayId}Photo${index}`}>
+            <Image
+              source={{ uri: photo.src }}
+              style={{
+                width: "80%", // ocupa todo el ancho disponible
+                aspectRatio: 4 / 3, // mantiene la proporción
+              }}
+              resizeMode="contain"
+            ></Image>
+            <Text>{photo.description}</Text>
+          </View>
+        ))}
     </>
   );
 }
