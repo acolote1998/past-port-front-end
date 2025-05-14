@@ -19,7 +19,7 @@ function Day({
       <Text>Date: {date}</Text>
       <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
       <Text>Description: {description}</Text>
-      <Text>Food Score: {foodScore}</Text>
+      {Number(foodScore) && <Text>Food Score: {foodScore}</Text>}
       {Number(joyScore) && <Text>Joy Score: {joyScore}</Text>}
       {Array.isArray(photos) && (
         <View>
