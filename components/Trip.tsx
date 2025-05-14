@@ -1,3 +1,4 @@
+import debugMode from "./constants/debugMode";
 import Day from "./Day";
 import type { TripType } from "./types/TripType";
 import { View, Text } from "react-native";
@@ -11,7 +12,7 @@ function Trip({
   return (
     <>
       <View>
-        <Text>Title: {title}</Text>
+        {title.length > 0 && <Text>Title: {title}</Text>}
         <Text>Belongs To Country Id: {belongsToCountryId}</Text>
         <Text>Rankeable : {rankeable}</Text>
         <Text>Trip Id: {tripId}</Text>
