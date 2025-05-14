@@ -10,20 +10,9 @@ function Trip({
   title,
   tripId,
 }: TripType) {
-  const calculateAvgFoodScore = () => {
-    let avgFood = 0;
-    days.forEach((day) => {
-      avgFood += day.foodScore;
-    });
-    return parseFloat((avgFood / days.length).toFixed(1));
-  };
-
-  const calculateAvgJoyScore = () => {
-    let avgJoy = 0;
-    days.forEach((day) => {
-      avgJoy += day.joyScore;
-    });
-    return parseFloat((avgJoy / days.length).toFixed(1));
+  const calculateAvgScore = (type: "foodScore" | "joyScore") => {
+    const total = days.reduce((sum, day) => sum + day[type], 0);
+    return parseFloat((total / days.length).toFixed(1));
   };
 
   return (
@@ -31,8 +20,8 @@ function Trip({
       <View>
         {title.length > 0 && <Text>{title}</Text>}
         <ScoreBar
-          joyScore={calculateAvgJoyScore()}
-          foodScore={calculateAvgFoodScore()}
+          joyScore={calculateAvgScore("foodScore")}
+          foodScore={calculateAvgScore("joyScore")}
           iconHeight={32}
           iconWidth={32}
         ></ScoreBar>
