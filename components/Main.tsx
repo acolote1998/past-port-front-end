@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import type { TripType } from "./types/TripType";
 import Trip from "./Trip";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import Navbar from "./Navbar";
 
 export function Main() {
   const [trips, setTrips] = useState<TripType[]>();
@@ -16,14 +17,17 @@ export function Main() {
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
       {trips?.map((trip) => {
         return (
-          <Trip
-            belongsToCountryId={trip.belongsToCountryId}
-            days={trip.days}
-            rankeable={trip.rankeable}
-            title={trip.title}
-            tripId={trip.tripId}
-            key={trip.tripId}
-          ></Trip>
+          <View>
+            <Navbar></Navbar>
+            <Trip
+              belongsToCountryId={trip.belongsToCountryId}
+              days={trip.days}
+              rankeable={trip.rankeable}
+              title={trip.title}
+              tripId={trip.tripId}
+              key={trip.tripId}
+            ></Trip>
+          </View>
         );
       })}
     </View>
