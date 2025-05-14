@@ -25,6 +25,9 @@ function Day({
       {Number(foodScore) && <Text>Food Score: {foodScore}</Text>}
       {Number(joyScore) && <Text>Joy Score: {joyScore}</Text>}
 
+      {
+        // User react-native-snap-carousel in the future!!!
+      }
       {Array.isArray(photos) && photos.length > 0 && (
         <View style={{ alignItems: "center" }}>
           <Text>Pictures</Text>
