@@ -17,7 +17,7 @@ function Trip({
 
   return (
     <>
-      <View>
+      <View style={{ alignItems: "center" }}>
         {title.length > 0 && <Text>{title}</Text>}
         <ScoreBar
           joyScore={calculateAvgScore("foodScore")}
