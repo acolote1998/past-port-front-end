@@ -15,7 +15,13 @@ function Day({
   joyScore,
 }: DayType) {
   return (
-    <View style={{ flex: 1, padding: 10 }}>
+    <View
+      style={{
+        alignItems: "center",
+        flex: 1,
+        padding: 10,
+      }}
+    >
       {debugMode && (
         <View>
           {dayId !== undefined && <Text>Day ID: {dayId}</Text>}
@@ -24,12 +30,12 @@ function Day({
           )}
         </View>
       )}
-      {title.length > 0 && <Text>Title: {title}</Text>}
-      {date.length > 0 && <Text>Date: {date}</Text>}
+      {title.length > 0 && <Text>{title}</Text>}
+      {date.length > 0 && <Text>{date}</Text>}
       {(rankeable == true || rankeable == false) && (
         <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
       )}
-      {description.length > 0 && <Text>Description: {description}</Text>}
+      {description.length > 0 && <Text>{description}</Text>}
       {Number(joyScore) && Number(foodScore) && (
         <ScoreBar
           iconHeight={24}
