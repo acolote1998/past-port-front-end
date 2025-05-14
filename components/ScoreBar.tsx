@@ -2,6 +2,7 @@ import { ScoreBarType } from "./types/ScoreBarType";
 import JoyIcon from "./JoyIcon";
 import FoodIcon from "./FoodIcon";
 import { View, Text } from "react-native";
+import StarIcon from "./StarIcon";
 
 const ScoreBar = ({
   foodScore,
@@ -16,14 +17,16 @@ const ScoreBar = ({
         alignItems: "center",
         display: "flex",
         flexDirection: "row",
+        gap: 10,
       }}
     >
+      <StarIcon width={iconWidth} height={iconHeight} />
       <Text>{(foodScore + joyScore) / 2}</Text>
       <Text> | </Text>
       <FoodIcon width={iconWidth} height={iconHeight} />
       <Text>{foodScore}</Text>
       <Text> | </Text>
-      <JoyIcon width={iconWidth} height={iconHeight}></JoyIcon>
+      <JoyIcon width={iconWidth} height={iconHeight} />
       <Text>{joyScore}</Text>
     </View>
   );

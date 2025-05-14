@@ -1,8 +1,6 @@
 import { View, Text, Image, FlatList } from "react-native";
 import { DayType } from "./types/DayType";
 import debugMode from "./constants/debugMode"; //Remove for deployment!
-import JoyIcon from "./JoyIcon";
-import FoodIcon from "./FoodIcon";
 import ScoreBar from "./ScoreBar";
 
 function Day({
