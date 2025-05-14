@@ -3,6 +3,24 @@ import Day from "./Day";
 import ScoreBar from "./ScoreBar";
 import type { TripType } from "./types/TripType";
 import { View, Text } from "react-native";
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+  tripTitle: {
+    fontSize: 28,
+    fontWeight: "bold",
+    marginBottom: 12,
+    margin: 10,
+  },
+  tripContainer: {
+    backgroundColor: "lightgray",
+    alignItems: "center",
+    paddingBottom: 15,
+    borderBottomStartRadius: 20,
+    borderBottomEndRadius: 20,
+  },
+});
+
 function Trip({
   belongsToCountryId,
   days,
@@ -17,8 +35,8 @@ function Trip({
 
   return (
     <>
-      <View style={{ alignItems: "center" }}>
-        {title.length > 0 && <Text>{title}</Text>}
+      <View style={styles.tripContainer}>
+        {title.length > 0 && <Text style={styles.tripTitle}>{title}</Text>}
         <ScoreBar
           joyScore={calculateAvgScore("foodScore")}
           foodScore={calculateAvgScore("joyScore")}
@@ -28,7 +46,7 @@ function Trip({
         {debugMode && Number(belongsToCountryId) && (
           <Text>Belongs To Country Id: {belongsToCountryId}</Text>
         )}
-        {(rankeable === true || rankeable === false) && (
+        {debugMode && (rankeable === true || rankeable === false) && (
           <Text>Rankeable : {rankeable ? "Yes" : "No"}</Text>
         )}
         {debugMode && Number(tripId) && <Text>Trip Id: {tripId}</Text>}
