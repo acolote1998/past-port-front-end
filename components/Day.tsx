@@ -33,7 +33,12 @@ function Day({
       )}
       {description.length > 0 && <Text>Description: {description}</Text>}
       {Number(joyScore) && Number(foodScore) && (
-        <ScoreBar foodScore={foodScore} joyScore={joyScore}></ScoreBar>
+        <ScoreBar
+          iconHeight={24}
+          iconWidth={24}
+          foodScore={foodScore}
+          joyScore={joyScore}
+        ></ScoreBar>
       )}
 
       {

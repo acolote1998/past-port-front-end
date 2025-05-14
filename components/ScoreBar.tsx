@@ -3,12 +3,17 @@ import JoyIcon from "./JoyIcon";
 import FoodIcon from "./FoodIcon";
 import { View, Text } from "react-native";
 
-const ScoreBar = ({ foodScore, joyScore }: ScoreBarType) => {
+const ScoreBar = ({
+  foodScore,
+  joyScore,
+  iconHeight,
+  iconWidth,
+}: ScoreBarType) => {
   return (
     <View style={{ display: "flex", flexDirection: "row" }}>
-      <FoodIcon width={24} height={24} />
+      <FoodIcon width={iconWidth} height={iconHeight} />
       <Text>{foodScore}</Text>
-      <JoyIcon width={24} height={24}></JoyIcon>
+      <JoyIcon width={iconWidth} height={iconHeight}></JoyIcon>
       <Text>{joyScore}</Text>
     </View>
   );
