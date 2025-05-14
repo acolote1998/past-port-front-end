@@ -1,7 +1,7 @@
 import { View, Text, Image, FlatList } from "react-native";
 import { DayType } from "./types/DayType";
 import debugMode from "./constants/debugMode"; //Remove for deployment!
-import FunIcon from "./FunIcon";
+import JoyIcon from "./JoyIcon";
 import FoodIcon from "./FoodIcon";
 
 function Day({
@@ -39,7 +39,7 @@ function Day({
       )}
       {Number(joyScore) && (
         <View style={{ display: "flex", flexDirection: "row" }}>
-          <FunIcon width={24} height={24}></FunIcon>
+          <JoyIcon width={24} height={24}></JoyIcon>
           <Text>{joyScore}</Text>
         </View>
       )}

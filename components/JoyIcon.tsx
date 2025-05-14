@@ -7,8 +7,8 @@ import Svg, {
   RadialGradient,
 } from "react-native-svg";
 //Usage:
-//       <FunIcon width={24} height={24}></FunIcon>
-const FunIcon = (props) => (
+//       <JoyIcon width={24} height={24}></JoyIcon>
+const JoyIcon = (props) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -460,4 +460,4 @@ const FunIcon = (props) => (
     </Defs>
   </Svg>
 );
-export default FunIcon;
+export default JoyIcon;
