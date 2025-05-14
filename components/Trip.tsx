@@ -19,7 +19,7 @@ function Trip({
         {(rankeable === true || rankeable === false) && (
           <Text>Rankeable : {rankeable ? "Yes" : "No"}</Text>
         )}
-        <Text>Trip Id: {tripId}</Text>
+        {debugMode && Number(tripId) && <Text>Trip Id: {tripId}</Text>}
       </View>
       {days.map((day) => (
         <Day
