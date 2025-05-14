@@ -17,7 +17,7 @@ function Day({
       <Text>Day ID: {dayId}</Text>
       <Text>Belongs to Trip ID: {belongsToTripId}</Text>
       <Text>Title: {title}</Text>
-      <Text>Date: {date}</Text>
+      {date.length > 0 && <Text>Date: {date}</Text>}
       {(rankeable == true || rankeable == false) && (
         <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
       )}
