@@ -15,7 +15,9 @@ function Day({
   return (
     <View style={{ flex: 1, padding: 10 }}>
       <Text>Day ID: {dayId}</Text>
-      <Text>Belongs to Trip ID: {belongsToTripId}</Text>
+      {Number(belongsToTripId) && (
+        <Text>Belongs to Trip ID: {belongsToTripId}</Text>
+      )}
       {title.length > 0 && <Text>Title: {title}</Text>}
       {date.length > 0 && <Text>Date: {date}</Text>}
       {(rankeable == true || rankeable == false) && (
