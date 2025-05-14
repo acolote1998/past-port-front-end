@@ -1,6 +1,8 @@
 import { View, Text, Image, FlatList } from "react-native";
 import { DayType } from "./types/DayType";
 import debugMode from "./constants/debugMode"; //Remove for deployment!
+import FunIcon from "./FunIcon";
+import FoodIcon from "./FoodIcon";
 
 function Day({
   dayId,
@@ -29,7 +31,12 @@ function Day({
         <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
       )}
       {description.length > 0 && <Text>Description: {description}</Text>}
-      {Number(foodScore) && <Text>Food Score: {foodScore}</Text>}
+      {Number(foodScore) && (
+        <View style={{ display: "flex", flexDirection: "row" }}>
+          <FoodIcon width={24} height={24} />
+          <Text>{foodScore}</Text>
+        </View>
+      )}
       {Number(joyScore) && <Text>Joy Score: {joyScore}</Text>}
 
       {
