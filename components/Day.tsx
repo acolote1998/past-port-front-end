@@ -18,7 +18,9 @@ function Day({
       <Text>Belongs to Trip ID: {belongsToTripId}</Text>
       <Text>Title: {title}</Text>
       <Text>Date: {date}</Text>
-      <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
+      {(rankeable == true || rankeable == false) && (
+        <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
+      )}
       {description.length > 0 && <Text>Description: {description}</Text>}
       {Number(foodScore) && <Text>Food Score: {foodScore}</Text>}
       {Number(joyScore) && <Text>Joy Score: {joyScore}</Text>}
