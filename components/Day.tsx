@@ -37,7 +37,12 @@ function Day({
           <Text>{foodScore}</Text>
         </View>
       )}
-      {Number(joyScore) && <Text>Joy Score: {joyScore}</Text>}
+      {Number(joyScore) && (
+        <View style={{ display: "flex", flexDirection: "row" }}>
+          <FunIcon width={24} height={24}></FunIcon>
+          <Text>{joyScore}</Text>
+        </View>
+      )}
 
       {
         // User react-native-snap-carousel in the future!!!
