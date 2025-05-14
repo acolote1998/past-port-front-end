@@ -13,7 +13,9 @@ function Trip({
     <>
       <View>
         {title.length > 0 && <Text>Title: {title}</Text>}
-        <Text>Belongs To Country Id: {belongsToCountryId}</Text>
+        {debugMode && Number(belongsToCountryId) && (
+          <Text>Belongs To Country Id: {belongsToCountryId}</Text>
+        )}
         <Text>Rankeable : {rankeable}</Text>
         <Text>Trip Id: {tripId}</Text>
       </View>
