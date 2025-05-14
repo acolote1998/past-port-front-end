@@ -8,11 +8,11 @@
     "photos": [
       {
         "description": "Foto de un perro",
-        "src": "../../data/images/cute-dog.png"
+        "src": "https://akiacevedo.com/projects/pastport/testimages/cute-dog.png"
       },
       {
         "description": "Golden hour",
-        "src": "../../data/images/golden-hour.png"
+        "src": "https://akiacevedo.com/projects/pastport/testimages/golden-hour.png"
       }
     ],
     "description": "We hade a nice walk with our dog, and then we watched the golden hour!",
@@ -28,7 +28,7 @@
     "photos": [
       {
         "description": "Here is Mc'Donalds!",
-        "src": "../../data/images/mc-donalds.png"
+        "src": "https://akiacevedo.com/projects/pastport/testimages/mc-donalds.png"
       }
     ],
     "description": "",
