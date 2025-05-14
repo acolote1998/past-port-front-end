@@ -2,6 +2,15 @@ import { View, Text, Image, FlatList } from "react-native";
 import { DayType } from "./types/DayType";
 import debugMode from "./constants/debugMode"; //Remove for deployment!
 import ScoreBar from "./ScoreBar";
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+  dayTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 12,
+  },
+});
 
 function Day({
   dayId,
@@ -30,9 +39,9 @@ function Day({
           )}
         </View>
       )}
-      {title.length > 0 && <Text>{title}</Text>}
+      {title.length > 0 && <Text style={styles.dayTitle}>{title}</Text>}
       {date.length > 0 && <Text>{date}</Text>}
-      {(rankeable == true || rankeable == false) && (
+      {debugMode && (rankeable == true || rankeable == false) && (
         <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
       )}
       {description.length > 0 && <Text>{description}</Text>}
