@@ -3,6 +3,7 @@ import { DayType } from "./types/DayType";
 import debugMode from "./constants/debugMode"; //Remove for deployment!
 import JoyIcon from "./JoyIcon";
 import FoodIcon from "./FoodIcon";
+import ScoreBar from "./ScoreBar";
 
 function Day({
   dayId,
@@ -31,17 +32,8 @@ function Day({
         <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
       )}
       {description.length > 0 && <Text>Description: {description}</Text>}
-      {Number(foodScore) && (
-        <View style={{ display: "flex", flexDirection: "row" }}>
-          <FoodIcon width={24} height={24} />
-          <Text>{foodScore}</Text>
-        </View>
-      )}
-      {Number(joyScore) && (
-        <View style={{ display: "flex", flexDirection: "row" }}>
-          <JoyIcon width={24} height={24}></JoyIcon>
-          <Text>{joyScore}</Text>
-        </View>
+      {Number(joyScore) && Number(foodScore) && (
+        <ScoreBar foodScore={foodScore} joyScore={joyScore}></ScoreBar>
       )}
 
       {
