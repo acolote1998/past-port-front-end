@@ -10,9 +10,19 @@ const ScoreBar = ({
   iconWidth,
 }: ScoreBarType) => {
   return (
-    <View style={{ display: "flex", flexDirection: "row" }}>
+    <View
+      style={{
+        alignSelf: "center",
+        alignItems: "center",
+        display: "flex",
+        flexDirection: "row",
+      }}
+    >
+      <Text>{(foodScore + joyScore) / 2}</Text>
+      <Text> | </Text>
       <FoodIcon width={iconWidth} height={iconHeight} />
       <Text>{foodScore}</Text>
+      <Text> | </Text>
       <JoyIcon width={iconWidth} height={iconHeight}></JoyIcon>
       <Text>{joyScore}</Text>
     </View>
