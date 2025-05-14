@@ -14,7 +14,7 @@ function Day({
 }: DayType) {
   return (
     <View style={{ flex: 1, padding: 10 }}>
-      <Text>Day ID: {dayId}</Text>
+      {Number(dayId) && <Text>Day ID: {dayId}</Text>}
       {Number(belongsToTripId) && (
         <Text>Belongs to Trip ID: {belongsToTripId}</Text>
       )}
