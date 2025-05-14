@@ -1,5 +1,6 @@
 import { View, Text, Image, FlatList } from "react-native";
 import { DayType } from "./types/DayType";
+import debugMode from "./constants/debugMode"; //Remove for deployment!
 
 function Day({
   dayId,
@@ -14,9 +15,13 @@ function Day({
 }: DayType) {
   return (
     <View style={{ flex: 1, padding: 10 }}>
-      {Number(dayId) && <Text>Day ID: {dayId}</Text>}
-      {Number(belongsToTripId) && (
-        <Text>Belongs to Trip ID: {belongsToTripId}</Text>
+      {debugMode && (
+        <View>
+          {dayId !== undefined && <Text>Day ID: {dayId}</Text>}
+          {belongsToTripId !== undefined && (
+            <Text>Belongs to Trip ID: {belongsToTripId}</Text>
+          )}
+        </View>
       )}
       {title.length > 0 && <Text>Title: {title}</Text>}
       {date.length > 0 && <Text>Date: {date}</Text>}
