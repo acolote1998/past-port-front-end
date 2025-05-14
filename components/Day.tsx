@@ -19,7 +19,7 @@ function Day({
       <Text>Title: {title}</Text>
       <Text>Date: {date}</Text>
       <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
-      <Text>Description: {description}</Text>
+      {description.length > 0 && <Text>Description: {description}</Text>}
       {Number(foodScore) && <Text>Food Score: {foodScore}</Text>}
       {Number(joyScore) && <Text>Joy Score: {joyScore}</Text>}
 
