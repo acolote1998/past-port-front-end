@@ -35,8 +35,37 @@
     "foodScore": 9,
     "joyScore": 7
   },
+
   {
     "dayId": 2,
+    "belongsToTripId": 0,
+    "title": "Czech Republic",
+    "date": "2025-05-18",
+    "rankeable": true,
+    "photos": [
+      {
+        "description": "When my girlfriend does not see me",
+        "src": "https://akiacevedo.com/projects/pastport/testimages/aki-boob.png"
+      },
+      {
+        "description": "Hurvinek!!!!!",
+        "src": "https://akiacevedo.com/projects/pastport/testimages/aki-hurvinek.png"
+      },
+      {
+        "description": "Aki and Misa in Tachovs square",
+        "src": "https://akiacevedo.com/projects/pastport/testimages/aki-misa-square.png"
+      },
+      {
+        "description": "Eating a loooot of sugar",
+        "src": "https://akiacevedo.com/projects/pastport/testimages/aki-misa-sugar.png"
+      }
+    ],
+    "description": "Some memories of when me and Misa went to Czech republic!",
+    "foodScore": 8,
+    "joyScore": 9
+  },
+  {
+    "dayId": 3,
     "belongsToTripId": 0,
     "title": "",
     "date": "2025-05-13",

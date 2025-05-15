@@ -31,6 +31,7 @@ function ImageCarousel({ photos }: { photos: PhotoType[] }) {
         width={width}
         height={width / 2}
         data={photos}
+        enabled={photos.length > 1}
         onProgressChange={progress}
         renderItem={({ item }) => (
           <View

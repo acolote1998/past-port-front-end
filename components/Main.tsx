@@ -17,7 +17,7 @@ export function Main() {
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
       {trips?.map((trip) => {
         return (
-          <View>
+          <View key={trip.tripId}>
             <Navbar></Navbar>
             <Trip
               belongsToCountryId={trip.belongsToCountryId}
