@@ -3,6 +3,7 @@ import { DayType } from "./types/DayType";
 import debugMode from "./constants/debugMode"; //Remove for deployment!
 import ScoreBar from "./ScoreBar";
 import { StyleSheet } from "react-native";
+import ImageCarousel from "./ImageCarousel";
 
 const styles = StyleSheet.create({
   dayTitle: {
@@ -53,34 +54,8 @@ function Day({
           joyScore={joyScore}
         ></ScoreBar>
       )}
-
-      {
-        // User react-native-snap-carousel in the future!!!
-      }
       {Array.isArray(photos) && photos.length > 0 && (
-        <View style={{ alignItems: "center" }}>
-          <Text>Pictures</Text>
-          <FlatList
-            data={photos}
-            keyExtractor={(_, index) => `photo-${index}`}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            renderItem={({ item }) => (
-              <View style={{ alignItems: "center", marginRight: 10 }}>
-                <Image
-                  source={{ uri: item.src }}
-                  style={{
-                    width: 375, // Fijamos un ancho específico
-                    height: 237, // Definimos la altura para controlar el tamaño
-                    borderRadius: 20,
-                  }}
-                  resizeMode="cover"
-                />
-                <Text>{item.description}</Text>
-              </View>
-            )}
-          />
-        </View>
+        <ImageCarousel photos={photos}></ImageCarousel>
       )}
     </View>
   );
