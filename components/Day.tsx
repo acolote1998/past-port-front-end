@@ -28,8 +28,9 @@ function Day({
     <View
       style={{
         alignItems: "center",
-        flex: 1,
-        padding: 10,
+        padding: 5,
+        backgroundColor: "lightgray",
+        borderRadius: 20,
       }}
     >
       {debugMode && (

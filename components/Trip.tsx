@@ -2,7 +2,7 @@ import debugMode from "./constants/debugMode";
 import Day from "./Day";
 import ScoreBar from "./ScoreBar";
 import type { TripType } from "./types/TripType";
-import { View, Text } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
@@ -51,20 +51,26 @@ function Trip({
         )}
         {debugMode && Number(tripId) && <Text>Trip Id: {tripId}</Text>}
       </View>
-      {days.map((day) => (
-        <Day
-          dayId={day.dayId}
-          belongsToTripId={day.belongsToTripId}
-          title={day.title}
-          date={day.date}
-          rankeable={day.rankeable}
-          photos={day.photos}
-          description={day.description}
-          foodScore={day.foodScore}
-          joyScore={day.joyScore}
-          key={day.dayId}
-        />
-      ))}
+      <FlatList
+        data={days}
+        keyExtractor={(day: any) => day.dayId.toString()}
+        renderItem={({ item: day }) => (
+          <View style={{ marginVertical: 12 }}>
+            <Day
+              dayId={day.dayId}
+              belongsToTripId={day.belongsToTripId}
+              title={day.title}
+              date={day.date}
+              rankeable={day.rankeable}
+              photos={day.photos}
+              description={day.description}
+              foodScore={day.foodScore}
+              joyScore={day.joyScore}
+              key={day.dayId}
+            />
+          </View>
+        )}
+      />
     </>
   );
 }
