@@ -5,15 +5,6 @@ import type { TripType } from "./types/TripType";
 import { View, Text, FlatList } from "react-native";
 import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
-  tripTitle: {
-    fontSize: 28,
-    fontWeight: "bold",
-    marginBottom: 12,
-    margin: 10,
-  },
-});
-
 function Trip({
   belongsToCountryId,
   days,
