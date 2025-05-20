@@ -16,7 +16,7 @@ function Day({
   joyScore,
 }: DayType) {
   return (
-    <View className="p-5 items-center bg-gray-400 rounded-2xl">
+    <View className="p-5 items-center bg-lightSecondaryLigther rounded-2xl">
       {debugMode && (
         <View>
           {dayId !== undefined && <Text>Day ID: {dayId}</Text>}

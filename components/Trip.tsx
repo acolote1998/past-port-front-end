@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   tripContainer: {
-    backgroundColor: "lightgray",
     alignItems: "center",
     paddingBottom: 15,
     borderBottomStartRadius: 20,
@@ -35,7 +34,7 @@ function Trip({
 
   return (
     <>
-      <View style={styles.tripContainer}>
+      <View className="bg-lightSecondaryDarker" style={styles.tripContainer}>
         {title.length > 0 && <Text style={styles.tripTitle}>{title}</Text>}
         <ScoreBar
           joyScore={calculateAvgScore("foodScore")}
