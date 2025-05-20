@@ -33,28 +33,28 @@ function Day({
       )}
       <View>
         {Number(joyScore) && Number(foodScore) && date.length > 0 && (
-          <View className="flex flex-row items-center">
-            <Text className="mr-10">{date}</Text>
-            <ScoreBar
-              iconHeight={24}
-              iconWidth={24}
-              foodScore={foodScore}
-              joyScore={joyScore}
-            ></ScoreBar>
-            {(title.length > 0 ||
-              description.length > 0 ||
-              photos.length > 0) && (
-              <Pressable onPress={() => setCollapsed(!collapsed)}>
-                <Text className="ml-5">
+          <Pressable onPress={() => setCollapsed(!collapsed)}>
+            <View className="flex flex-row items-center">
+              <Text className="mr-5">{date}</Text>
+              <ScoreBar
+                iconHeight={24}
+                iconWidth={24}
+                foodScore={foodScore}
+                joyScore={joyScore}
+              ></ScoreBar>
+              {(title.length > 0 ||
+                description.length > 0 ||
+                photos.length > 0) && (
+                <Text className="ml-12">
                   {collapsed ? (
-                    <ArrowRightIcon width={12} height={12} />
+                    <ArrowRightIcon width={16} height={16} />
                   ) : (
-                    <ArrowDownIcon width={12} height={12} />
+                    <ArrowDownIcon width={16} height={16} />
                   )}
                 </Text>
-              </Pressable>
-            )}
-          </View>
+              )}
+            </View>
+          </Pressable>
         )}
       </View>
       {title.length > 0 && !collapsed && (
