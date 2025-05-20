@@ -41,12 +41,6 @@ function Day({
           )}
         </View>
       )}
-      {title.length > 0 && <Text style={styles.dayTitle}>{title}</Text>}
-      {date.length > 0 && <Text>{date}</Text>}
-      {debugMode && (rankeable == true || rankeable == false) && (
-        <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
-      )}
-      {description.length > 0 && <Text>{description}</Text>}
       {Number(joyScore) && Number(foodScore) && (
         <ScoreBar
           iconHeight={24}
@@ -55,6 +49,12 @@ function Day({
           joyScore={joyScore}
         ></ScoreBar>
       )}
+      {title.length > 0 && <Text style={styles.dayTitle}>{title}</Text>}
+      {date.length > 0 && <Text>{date}</Text>}
+      {debugMode && (rankeable == true || rankeable == false) && (
+        <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
+      )}
+      {description.length > 0 && <Text>{description}</Text>}
       {Array.isArray(photos) && photos.length > 0 && (
         <ImageCarousel photos={photos}></ImageCarousel>
       )}
