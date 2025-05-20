@@ -42,9 +42,9 @@ function Day({
                 foodScore={foodScore}
                 joyScore={joyScore}
               ></ScoreBar>
-              {(title.length > 0 ||
-                description.length > 0 ||
-                photos.length > 0) && (
+              {title.length > 0 ||
+              description.length > 0 ||
+              photos.length > 0 ? (
                 <Text className="ml-12">
                   {collapsed ? (
                     <ArrowRightIcon width={16} height={16} />
@@ -52,6 +52,11 @@ function Day({
                     <ArrowDownIcon width={16} height={16} />
                   )}
                 </Text>
+              ) : (
+                <View
+                  className="ml-12"
+                  style={{ width: 16, height: 16 }}
+                ></View>
               )}
             </View>
           </Pressable>
