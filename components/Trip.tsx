@@ -3,7 +3,6 @@ import Day from "./Day";
 import ScoreBar from "./ScoreBar";
 import type { TripType } from "./types/TripType";
 import { View, Text, FlatList } from "react-native";
-import { StyleSheet } from "react-native";
 
 function Trip({
   belongsToCountryId,
