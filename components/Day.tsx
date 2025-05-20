@@ -25,14 +25,7 @@ function Day({
   joyScore,
 }: DayType) {
   return (
-    <View
-      style={{
-        alignItems: "center",
-        padding: 5,
-        backgroundColor: "lightgray",
-        borderRadius: 20,
-      }}
-    >
+    <View className="p-5 items-center bg-gray-400 rounded-2xl">
       {debugMode && (
         <View>
           {dayId !== undefined && <Text>Day ID: {dayId}</Text>}
