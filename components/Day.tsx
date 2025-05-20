@@ -37,7 +37,7 @@ function Day({
         </View>
       )}
       {title.length > 0 && (
-        <Text className="text-lg font-bold mb-2">{title}</Text>
+        <Text className="text-xl font-bold mb-2">{title}</Text>
       )}
       {debugMode && (rankeable == true || rankeable == false) && (
         <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>

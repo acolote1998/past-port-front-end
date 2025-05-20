@@ -12,12 +12,6 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     margin: 10,
   },
-  tripContainer: {
-    alignItems: "center",
-    paddingBottom: 15,
-    borderBottomStartRadius: 20,
-    borderBottomEndRadius: 20,
-  },
 });
 
 function Trip({
@@ -34,7 +28,7 @@ function Trip({
 
   return (
     <>
-      <View className="bg-lightSecondaryDarker" style={styles.tripContainer}>
+      <View className="bg-lightSecondaryDarker items-center pb-4 rounded-b-3xl">
         {title.length > 0 && (
           <Text className="text-2xl font-bold mt-2 mb-1">{title}</Text>
         )}
