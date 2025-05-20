@@ -25,18 +25,20 @@ function Day({
           )}
         </View>
       )}
-      {Number(joyScore) && Number(foodScore) && (
-        <ScoreBar
-          iconHeight={24}
-          iconWidth={24}
-          foodScore={foodScore}
-          joyScore={joyScore}
-        ></ScoreBar>
+      {Number(joyScore) && Number(foodScore) && date.length > 0 && (
+        <View className="flex flex-row items-center">
+          <Text className="mr-10">{date}</Text>
+          <ScoreBar
+            iconHeight={24}
+            iconWidth={24}
+            foodScore={foodScore}
+            joyScore={joyScore}
+          ></ScoreBar>
+        </View>
       )}
       {title.length > 0 && (
         <Text className="text-lg font-bold mb-2">{title}</Text>
       )}
-      {date.length > 0 && <Text>{date}</Text>}
       {debugMode && (rankeable == true || rankeable == false) && (
         <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
       )}
