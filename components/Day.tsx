@@ -5,14 +5,6 @@ import ScoreBar from "./ScoreBar";
 import { StyleSheet } from "react-native";
 import ImageCarousel from "./ImageCarousel";
 
-const styles = StyleSheet.create({
-  dayTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-    marginBottom: 12,
-  },
-});
-
 function Day({
   dayId,
   belongsToTripId,
@@ -42,7 +34,9 @@ function Day({
           joyScore={joyScore}
         ></ScoreBar>
       )}
-      {title.length > 0 && <Text style={styles.dayTitle}>{title}</Text>}
+      {title.length > 0 && (
+        <Text className="text-lg font-bold mb-2">{title}</Text>
+      )}
       {date.length > 0 && <Text>{date}</Text>}
       {debugMode && (rankeable == true || rankeable == false) && (
         <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
