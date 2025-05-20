@@ -1,5 +1,5 @@
 import { ScoreBarType } from "./types/ScoreBarType";
-import JoyIcon from "./JoyIcon";
+import JoyIcon from "./svgs/JoyIcon";
 import FoodIcon from "./svgs/FoodIcon";
 import { View, Text } from "react-native";
 import StarIcon from "./svgs/StarIcon";

@@ -37,12 +37,12 @@ function Day({
         </View>
       )}
       {title.length > 0 && (
-        <Text className="text-xl font-bold mb-2">{title}</Text>
+        <Text className="text-xl font-bold m-3">{title}</Text>
       )}
       {debugMode && (rankeable == true || rankeable == false) && (
         <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
       )}
-      {description.length > 0 && <Text>{description}</Text>}
+      {description.length > 0 && <Text className="mb-3">{description}</Text>}
       {Array.isArray(photos) && photos.length > 0 && (
         <ImageCarousel photos={photos}></ImageCarousel>
       )}
