@@ -2,7 +2,6 @@ import { View, Text, Image, FlatList } from "react-native";
 import { DayType } from "./types/DayType";
 import debugMode from "./constants/debugMode"; //Remove for deployment!
 import ScoreBar from "./ScoreBar";
-import { StyleSheet } from "react-native";
 import ImageCarousel from "./ImageCarousel";
 
 function Day({
