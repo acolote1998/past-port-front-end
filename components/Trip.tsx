@@ -35,7 +35,9 @@ function Trip({
   return (
     <>
       <View className="bg-lightSecondaryDarker" style={styles.tripContainer}>
-        {title.length > 0 && <Text style={styles.tripTitle}>{title}</Text>}
+        {title.length > 0 && (
+          <Text className="text-2xl font-bold mt-2 mb-1">{title}</Text>
+        )}
         <ScoreBar
           joyScore={calculateAvgScore("foodScore")}
           foodScore={calculateAvgScore("joyScore")}
