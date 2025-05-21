@@ -1,5 +1,4 @@
 import { useState } from "react";
-import debugMode from "./constants/debugMode";
 import Day from "./Day";
 import ScoreBar from "./ScoreBar";
 import type { TripType } from "./types/TripType";
@@ -13,7 +12,7 @@ function Trip({
   title,
   tripId,
 }: TripType) {
-  const [collapsed, setCollapsed] = useState<boolean>(false);
+  const [collapsed, setCollapsed] = useState<boolean>(true);
   const calculateAvgScore = (type: "foodScore" | "joyScore") => {
     const total = days.reduce((sum, day) => sum + day[type], 0);
     return parseFloat((total / days.length).toFixed(1));
@@ -32,13 +31,6 @@ function Trip({
             iconHeight={28}
             iconWidth={28}
           ></ScoreBar>
-          {debugMode && Number(belongsToCountryId) && (
-            <Text>Belongs To Country Id: {belongsToCountryId}</Text>
-          )}
-          {debugMode && (rankeable === true || rankeable === false) && (
-            <Text>Rankeable : {rankeable ? "Yes" : "No"}</Text>
-          )}
-          {debugMode && Number(tripId) && <Text>Trip Id: {tripId}</Text>}
         </View>
       </Pressable>
       {!collapsed && (
