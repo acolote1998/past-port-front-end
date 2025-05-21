@@ -1,6 +1,5 @@
 import { View, Text, Pressable } from "react-native";
 import { DayType } from "./types/DayType";
-import debugMode from "./constants/debugMode"; //Remove for deployment!
 import ScoreBar from "./ScoreBar";
 import ImageCarousel from "./ImageCarousel";
 import { useState } from "react";
@@ -8,11 +7,8 @@ import ArrowDownIcon from "./svgs/ArrowDownIcon";
 import ArrowRightIcon from "./svgs/ArrowRightIcon";
 
 function Day({
-  dayId,
-  belongsToTripId,
   title,
   date,
-  rankeable,
   photos,
   description,
   foodScore,
@@ -23,14 +19,6 @@ function Day({
     <View
       className={`p-5 transition-transform items-center bg-lightSecondaryLigther rounded-2xl`}
     >
-      {debugMode && (
-        <View>
-          {dayId !== undefined && <Text>Day ID: {dayId}</Text>}
-          {belongsToTripId !== undefined && (
-            <Text>Belongs to Trip ID: {belongsToTripId}</Text>
-          )}
-        </View>
-      )}
       <View>
         {Number(joyScore) && Number(foodScore) && date.length > 0 && (
           <Pressable onPress={() => setCollapsed(!collapsed)}>
@@ -64,9 +52,6 @@ function Day({
       </View>
       {title.length > 0 && !collapsed && (
         <Text className="text-xl font-bold m-3">{title}</Text>
-      )}
-      {debugMode && (rankeable == true || rankeable == false) && (
-        <Text>Rankeable: {rankeable ? "Yes" : "No"}</Text>
       )}
       {description.length > 0 && !collapsed && (
         <Text className="mb-3">{description}</Text>

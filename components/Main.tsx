@@ -1,7 +1,6 @@
 import { View } from "react-native";
 import CountryData from "./testData/countries.json";
 import { useState, useEffect } from "react";
-import Trip from "./Trip";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Navbar from "./Navbar";
 import { CountryType } from "./types/CountryType";

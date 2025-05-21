@@ -1,13 +1,11 @@
 import { useState } from "react";
-import debugMode from "./constants/debugMode";
-import Day from "./Day";
 import ScoreBar from "./ScoreBar";
 import type { CountryType } from "./types/CountryType";
 import { View, Text, Pressable, FlatList } from "react-native";
 import { TripType } from "./types/TripType";
 import Trip from "./Trip";
 
-function Country({ countryId, trips, rankeable, countryName }: CountryType) {
+function Country({ trips, countryName }: CountryType) {
   const [collapsed, setCollapsed] = useState<boolean>(false);
   const calculateAvgScore = (type: "foodScore" | "joyScore") => {
     return 0;
@@ -26,12 +24,6 @@ function Country({ countryId, trips, rankeable, countryName }: CountryType) {
             iconHeight={28}
             iconWidth={28}
           ></ScoreBar>
-          {debugMode && Number(countryId) && (
-            <Text>Country Id: {countryId}</Text>
-          )}
-          {debugMode && (rankeable === true || rankeable === false) && (
-            <Text>Rankeable : {rankeable ? "Yes" : "No"}</Text>
-          )}
         </View>
       </Pressable>
       {!collapsed && (
