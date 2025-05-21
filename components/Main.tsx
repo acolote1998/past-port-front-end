@@ -15,10 +15,10 @@ export function Main() {
   }, []);
   return (
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
+      <Navbar></Navbar>
       {trips?.map((trip) => {
         return (
-          <View key={trip.tripId}>
-            <Navbar></Navbar>
+          <View className="mb-2" key={trip.tripId}>
             <Trip
               belongsToCountryId={trip.belongsToCountryId}
               days={trip.days}
