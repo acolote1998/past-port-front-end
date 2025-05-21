@@ -7,7 +7,7 @@ export default function App() {
   return (
     <GestureHandlerRootView>
       <SafeAreaProvider>
-        <View className="bg-lightMainBg" style={styles.container}>
+        <View className="bg-lightMainBg flex-1">
           <StatusBar style="auto" />
           <Main></Main>
         </View>
@@ -15,10 +15,3 @@ export default function App() {
     </GestureHandlerRootView>
   );
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

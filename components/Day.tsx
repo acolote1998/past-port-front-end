@@ -18,7 +18,7 @@ function Day({
   foodScore,
   joyScore,
 }: DayType) {
-  const [collapsed, setCollapsed] = useState<boolean>(false);
+  const [collapsed, setCollapsed] = useState<boolean>(true);
   return (
     <View
       className={`p-5 transition-transform items-center bg-lightSecondaryLigther rounded-2xl`}
