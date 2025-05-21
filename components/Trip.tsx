@@ -4,6 +4,7 @@ import Day from "./Day";
 import ScoreBar from "./ScoreBar";
 import type { TripType } from "./types/TripType";
 import { View, Text, Pressable, FlatList } from "react-native";
+import { DayType } from "./types/DayType";
 
 function Trip({
   belongsToCountryId,
@@ -43,7 +44,7 @@ function Trip({
       {!collapsed && (
         <FlatList
           data={days}
-          keyExtractor={(day: any) => day.dayId.toString()}
+          keyExtractor={(day: DayType) => day.dayId.toString()}
           renderItem={({ item: day }) => (
             <View className="mt-1.5 mb-1.5">
               <Day
