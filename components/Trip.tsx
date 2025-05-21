@@ -21,7 +21,11 @@ function Trip({
   return (
     <>
       <Pressable onPress={() => setCollapsed(!collapsed)}>
-        <View className="bg-lightSecondaryDarker w-[100vw] items-center pb-4 rounded-b-3xl relative">
+        <View
+          className={`bg-lightSecondaryDarker w-[100vw] items-center pb-4 ${
+            collapsed ? `rounded-3xl` : `rounded-b-3xl`
+          } relative`}
+        >
           {title.length > 0 && (
             <Text className="text-2xl font-bold mt-2 mb-1">{title}</Text>
           )}
