@@ -82,5 +82,69 @@
         "joyScore": 5
       }
     ]
+  },
+  {
+    "title": "Thailand",
+    "tripId": 1,
+    "belongsToCountryId": 1,
+    "rankeable": true,
+    "days": [
+      {
+        "dayId": 4,
+        "belongsToTripId": 0,
+        "title": "Day in Bangokg",
+        "date": "2025-06-19",
+        "rankeable": true,
+        "photos": [
+          {
+            "description": "Beach day babe",
+            "src": "https://akiacevedo.com/projects/pastport/testimages/thailand-1.png"
+          },
+          {
+            "description": "A crazy ass temple",
+            "src": "https://akiacevedo.com/projects/pastport/testimages/thailand-2.png"
+          },
+          {
+            "description": "An even crazier ass temple",
+            "src": "https://akiacevedo.com/projects/pastport/testimages/thailand-3.png"
+          }
+        ],
+        "description": "We hade a nice walk with our dog, and then we watched the golden hour!",
+        "foodScore": 9,
+        "joyScore": 10
+      },
+      {
+        "dayId": 5,
+        "belongsToTripId": 0,
+        "title": "Nightlife in thaithaithai",
+        "date": "2025-07-25",
+        "rankeable": true,
+        "photos": [
+          {
+            "description": "Some nice darkness",
+            "src": "https://akiacevedo.com/projects/pastport/testimages/thailand-night-1.png"
+          },
+          {
+            "description": "Night!",
+            "src": "https://akiacevedo.com/projects/pastport/testimages/thailand-night-2.png"
+          }
+        ],
+        "description": "Chilling willing rilling milling filling",
+        "foodScore": 7,
+        "joyScore": 8
+      },
+
+      {
+        "dayId": 6,
+        "belongsToTripId": 0,
+        "title": "A day in the hotel",
+        "date": "2025-07-29",
+        "rankeable": true,
+        "photos": [],
+        "description": "",
+        "foodScore": 7,
+        "joyScore": 5
+      }
+    ]
   }
 ]
