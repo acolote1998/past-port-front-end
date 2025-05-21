@@ -3,7 +3,7 @@ import debugMode from "./constants/debugMode";
 import Day from "./Day";
 import ScoreBar from "./ScoreBar";
 import type { TripType } from "./types/TripType";
-import { View, Text, FlatList, Pressable } from "react-native";
+import { View, Text, Pressable, FlatList } from "react-native";
 
 function Trip({
   belongsToCountryId,
@@ -45,7 +45,7 @@ function Trip({
           data={days}
           keyExtractor={(day: any) => day.dayId.toString()}
           renderItem={({ item: day }) => (
-            <View style={{ marginVertical: 12 }}>
+            <View className="mt-1.5 mb-1.5">
               <Day
                 dayId={day.dayId}
                 belongsToTripId={day.belongsToTripId}
