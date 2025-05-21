@@ -1,0 +1,157 @@
+[
+  {
+    "countryName": "Argentina",
+    "countryId": 0,
+    "rankeable": true,
+    "trips": [
+      {
+        "title": "Tachov",
+        "tripId": 0,
+        "belongsToCountryId": 0,
+        "rankeable": true,
+        "days": [
+          {
+            "dayId": 0,
+            "belongsToTripId": 0,
+            "title": "A nice day!",
+            "date": "2025-05-10",
+            "rankeable": true,
+            "photos": [
+              {
+                "description": "Foto de un perro",
+                "src": "https://akiacevedo.com/projects/pastport/testimages/cute-dog.png"
+              },
+              {
+                "description": "Golden hour",
+                "src": "https://akiacevedo.com/projects/pastport/testimages/golden-hour.png"
+              }
+            ],
+            "description": "We hade a nice walk with our dog, and then we watched the golden hour!",
+            "foodScore": 8,
+            "joyScore": 9
+          },
+          {
+            "dayId": 1,
+            "belongsToTripId": 0,
+            "title": "Went to Mc'Donalds",
+            "date": "2025-05-12",
+            "rankeable": true,
+            "photos": [
+              {
+                "description": "Here is Mc'Donalds!",
+                "src": "https://akiacevedo.com/projects/pastport/testimages/mc-donalds.png"
+              }
+            ],
+            "description": "",
+            "foodScore": 9,
+            "joyScore": 7
+          },
+
+          {
+            "dayId": 2,
+            "belongsToTripId": 0,
+            "title": "Czech Republic",
+            "date": "2025-05-18",
+            "rankeable": true,
+            "photos": [
+              {
+                "description": "When my girlfriend does not see me",
+                "src": "https://akiacevedo.com/projects/pastport/testimages/aki-boob.png"
+              },
+              {
+                "description": "Hurvinek!!!!!",
+                "src": "https://akiacevedo.com/projects/pastport/testimages/aki-hurvinek.png"
+              },
+              {
+                "description": "Aki and Misa in Tachovs square",
+                "src": "https://akiacevedo.com/projects/pastport/testimages/aki-misa-square.png"
+              },
+              {
+                "description": "Eating a loooot of sugar",
+                "src": "https://akiacevedo.com/projects/pastport/testimages/aki-misa-sugar.png"
+              }
+            ],
+            "description": "Some memories of when me and Misa went to Czech republic!",
+            "foodScore": 8,
+            "joyScore": 9
+          },
+          {
+            "dayId": 3,
+            "belongsToTripId": 0,
+            "title": "",
+            "date": "2025-05-13",
+            "rankeable": true,
+            "photos": [],
+            "description": "",
+            "foodScore": 6,
+            "joyScore": 5
+          }
+        ]
+      },
+      {
+        "title": "Thailand",
+        "tripId": 1,
+        "belongsToCountryId": 1,
+        "rankeable": true,
+        "days": [
+          {
+            "dayId": 4,
+            "belongsToTripId": 0,
+            "title": "Day in Bangokg",
+            "date": "2025-06-19",
+            "rankeable": true,
+            "photos": [
+              {
+                "description": "Beach day babe",
+                "src": "https://akiacevedo.com/projects/pastport/testimages/thailand-1.png"
+              },
+              {
+                "description": "A crazy ass temple",
+                "src": "https://akiacevedo.com/projects/pastport/testimages/thailand-2.png"
+              },
+              {
+                "description": "An even crazier ass temple",
+                "src": "https://akiacevedo.com/projects/pastport/testimages/thailand-3.png"
+              }
+            ],
+            "description": "We hade a nice walk with our dog, and then we watched the golden hour!",
+            "foodScore": 9,
+            "joyScore": 10
+          },
+          {
+            "dayId": 5,
+            "belongsToTripId": 0,
+            "title": "Nightlife in thaithaithai",
+            "date": "2025-07-25",
+            "rankeable": true,
+            "photos": [
+              {
+                "description": "Some nice darkness",
+                "src": "https://akiacevedo.com/projects/pastport/testimages/thailand-night-1.png"
+              },
+              {
+                "description": "Night!",
+                "src": "https://akiacevedo.com/projects/pastport/testimages/thailand-night-2.png"
+              }
+            ],
+            "description": "Chilling willing rilling milling filling",
+            "foodScore": 7,
+            "joyScore": 8
+          },
+
+          {
+            "dayId": 6,
+            "belongsToTripId": 0,
+            "title": "A day in the hotel",
+            "date": "2025-07-29",
+            "rankeable": true,
+            "photos": [],
+            "description": "",
+            "foodScore": 7,
+            "joyScore": 5
+          }
+        ]
+      }
+    ]
+  }
+]
