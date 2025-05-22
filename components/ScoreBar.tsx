@@ -21,7 +21,7 @@ const ScoreBar = ({
       }}
     >
       <StarIcon width={iconWidth} height={iconHeight} />
-      <Text>{(foodScore + joyScore) / 2}</Text>
+      <Text>{Math.round((foodScore + joyScore) / 2)}</Text>
       <Text> | </Text>
       <FoodIcon width={iconWidth} height={iconHeight} />
       <Text>{foodScore}</Text>

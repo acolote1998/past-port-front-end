@@ -15,7 +15,7 @@ function Trip({
   const [collapsed, setCollapsed] = useState<boolean>(true);
   const calculateAvgScore = (type: "foodScore" | "joyScore") => {
     const total = days.reduce((sum, day) => sum + day[type], 0);
-    return parseFloat((total / days.length).toFixed(1));
+    return Math.round(total / days.length);
   };
 
   return (
