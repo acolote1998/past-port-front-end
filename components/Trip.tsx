@@ -21,15 +21,15 @@ function Trip({
   return (
     <>
       <Pressable onPress={() => setCollapsed(!collapsed)}>
-        <View className="bg-lightSecondaryDarker w-[100vw] items-center p-1.5 rounded-2xl relative flex flex-row justify-center mt-2 ">
+        <View className=" bg-lightSecondaryDarker w-[98vw] items-center p-1.5 rounded-2xl flex flex-row justify-center mt-2">
           {title.length > 0 && (
             <Text className="text-2xl font-bold mr-3.5">{title}</Text>
           )}
           <ScoreBar
             joyScore={calculateAvgScore("foodScore")}
             foodScore={calculateAvgScore("joyScore")}
-            iconHeight={28}
-            iconWidth={28}
+            iconHeight={18}
+            iconWidth={18}
           ></ScoreBar>
         </View>
       </Pressable>

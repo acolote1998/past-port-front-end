@@ -25,7 +25,7 @@ function ImageCarousel({ photos }: { photos: PhotoType[] }) {
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    <View className="w-[95vw]">
       <Carousel
         ref={ref}
         width={width}
@@ -34,19 +34,11 @@ function ImageCarousel({ photos }: { photos: PhotoType[] }) {
         enabled={photos.length > 1}
         onProgressChange={progress}
         renderItem={({ item }) => (
-          <View
-            style={{
-              alignItems: "center",
-              marginRight: 10,
-            }}
-          >
+          <View className="flex align-middle justify-between">
             <Image
               source={{ uri: item.src }}
-              style={{
-                width: 375,
-                height: 237,
-                borderRadius: 10,
-              }}
+              className="w-[95vw] h-[23.5vh] rounded-2xl"
+              style={{ resizeMode: "stretch" }}
             />
             <Text>{item.description}</Text>
           </View>

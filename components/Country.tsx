@@ -31,7 +31,7 @@ function Country({ trips, countryName }: CountryType) {
           data={trips}
           keyExtractor={(trip: TripType) => trip.tripId.toString()}
           renderItem={({ item: trip }) => (
-            <View className="mt-1.5 mb-1.5">
+            <View className="mt-1.5 mb-1.5 items-center">
               <Trip
                 tripId={trip.tripId}
                 belongsToCountryId={trip.belongsToCountryId}

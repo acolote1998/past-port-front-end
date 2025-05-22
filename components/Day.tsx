@@ -17,7 +17,7 @@ function Day({
   const [collapsed, setCollapsed] = useState<boolean>(true);
   return (
     <View
-      className={`p-5 transition-transform items-center bg-lightSecondaryLigther rounded-2xl`}
+      className={`p-5 transition-transform items-center bg-lightSecondaryLigther rounded-2xl w-[96vw]`}
     >
       <View>
         {Number(joyScore) && Number(foodScore) && date.length > 0 && (
@@ -25,8 +25,8 @@ function Day({
             <View className="flex flex-row items-center">
               <Text className="mr-5">{date}</Text>
               <ScoreBar
-                iconHeight={24}
-                iconWidth={24}
+                iconHeight={16}
+                iconWidth={16}
                 foodScore={foodScore}
                 joyScore={joyScore}
               ></ScoreBar>
