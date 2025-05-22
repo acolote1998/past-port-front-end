@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ScoreBar from "./ScoreBar";
 import type { CountryType } from "./types/CountryType";
 import { View, Text, Pressable, FlatList } from "react-native";
@@ -7,9 +7,27 @@ import Trip from "./Trip";
 
 function Country({ trips, countryName }: CountryType) {
   const [collapsed, setCollapsed] = useState<boolean>(false);
-  const calculateAvgScore = (type: "foodScore" | "joyScore") => {
-    return 0;
+  const [foodScore, setFoodScore] = useState<number>(0);
+  const [joyScore, setJoyScore] = useState<number>(0);
+
+  const calculateAverageScore = (scoreKey: "foodScore" | "joyScore") => {
+    let totalDays = 0;
+    let totalScore = 0;
+
+    trips.forEach((trip) =>
+      trip.days.forEach((day) => {
+        totalScore += day[scoreKey];
+        totalDays++;
+      })
+    );
+
+    return totalDays === 0 ? 0 : Math.round(totalScore / totalDays);
   };
+
+  useEffect(() => {
+    setFoodScore(calculateAverageScore("foodScore"));
+    setJoyScore(calculateAverageScore("joyScore"));
+  }, [trips]);
 
   return (
     <>
@@ -19,8 +37,8 @@ function Country({ trips, countryName }: CountryType) {
             <Text className="text-2xl font-bold mr-3.5">{countryName}</Text>
           )}
           <ScoreBar
-            joyScore={calculateAvgScore("foodScore")}
-            foodScore={calculateAvgScore("joyScore")}
+            joyScore={joyScore}
+            foodScore={foodScore}
             iconHeight={28}
             iconWidth={28}
           ></ScoreBar>
